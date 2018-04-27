@@ -1,0 +1,65 @@
+  <div class="container gallery-container">
+  
+    <h1 class="text-center">Events Gallery</h1>
+  
+    
+      
+    <div class="tz-gallery">
+  
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <a class="lightbox" href="images/bg2.jpg">
+                    <img src="images/bg2.jpg" alt="Park" class="card-img-top">
+                    </a>
+                </div>
+            </div>
+             
+            <div class="col-md-4">
+                <div class="card">
+                    <a class="lightbox" href="images/bg2.jpg">
+                    <img src="images/bg2.jpg" alt="Park" class="card-img-top">
+                    </a>
+                </div>
+            </div>
+             
+            <div class="col-md-4">
+                <div class="card">
+                    <a class="lightbox" href="images/bg3.jpg">
+                    <img src="images/bg3.jpg" alt="Park" class="card-img-top">
+                    </a>
+                </div>
+            </div>
+        </div>
+          <div class="row"> 
+            <div class="col-md-4">
+                <div class="card">
+                    <a class="lightbox" href="images/bg4.jpg">
+                    <img src="images/bg4.jpg" alt="Park" class="card-img-top">
+                    </a>
+                </div>
+            </div>
+             
+            <div class="col-md-4">
+                <div class="card">
+                    <a class="lightbox" href="images/bg2.jpg">
+                    <img src="images/bg2.jpg" alt="Park" class="card-img-top">
+                    </a>
+                </div>
+            </div>
+             
+            <div class="col-md-4">
+                <div class="card">
+                    <a class="lightbox" href="images/bg3.jpg">
+                    <img src="images/bg3.jpg" alt="Park" class="card-img-top">
+                    </a>
+                </div>
+            </div>
+         
+        </div>
+  
+    </div>
+  
+
+ 
+</div>
