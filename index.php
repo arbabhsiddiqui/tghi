@@ -30,7 +30,7 @@
                     
                 </div>
                 <div class="buttondiv">
-                <a href="home.php" class="btn btn-success btn-lg">Get Started</a>    
+                <a href="home.php" class="btn btn-index btn-lg">Get Started</a>    
                 </div>
                 
             </div>

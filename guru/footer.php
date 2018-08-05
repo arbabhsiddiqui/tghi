@@ -1,3 +1,4 @@
+
 <footer>
     <div class="container-fluid ">
         <div class="container pt-5 pb-5">
@@ -70,5 +71,3 @@
        <script>
     baguetteBox.run('.tz-gallery');
 </script>
-  </body>
-</html>
