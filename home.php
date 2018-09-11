@@ -5,11 +5,10 @@
        <?php
     
 include("header.php");
+
+		   include('guru/includes/connect.php');
     
     
-
-
-
 ?>
         
         </div>
@@ -18,7 +17,7 @@ include("header.php");
                 <div class="col-sm-12">
                      <div class="text-area">
                      
-                         <h1>learn guitar within weeks</h1>
+                         <h1>Learn Guitar WithIn Weeks</h1>
                      
                      </div>
                 </div>
@@ -36,11 +35,12 @@ include("header.php");
                   </div>
               </div>
               <div class="row">
-                  <div class="col-sm-6 pt-1">
+                  <div class="col-sm-6 pt-2">
                         <img alt="about" src="images/amir.PNG"  class="img-fluid" >
                   </div>
                   <div class="col-sm-6 pt-2 text-justify">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam animi et corporis unde. Quis, amet, veniam. Minus officiis unde nam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque tenetur nesciunt illo cum cumque delectus dignissimos eius, quae nulla officiis, quos quasi sapiente dolorem ut, itaque iste. Eos, voluptatum, enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptatibus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore odio ab, fuga. Perferendis ut, debitis voluptatem, eum veritatis tempora! Nihil.</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsa ipsam, excepturi exercitationem ut voluptate, error blanditiis facilis impedit a facere harum possimus iste modi, odit velit amet dignissimos incidunt. Nulla cupiditate excepturi quod dolor neque quae placeat nihil rem fugit maiores esse nobis labore, cum qui atque exercitationem id. Rem ipsa autem deleniti laudantium ex similique mollitia, qui id assumenda necessitatibus numquam nam odit fugiat veritatis? Nobis asperiores accusamus dolor quia atque, iste pariatur rerum sit ipsa numquam cumque sequi exercitationem? Officia dignissimos animi ad quasi beatae sed, quos minima incidunt possimus reiciendis voluptate, eligendi, itaque perspiciatis placeat aliquam fugiat? Distinctio delectus eum, error porro voluptatem amet quae! Minus, totam! Libero suscipit et ab totam aut quia tenetur animi esse vero cupiditate, rerum consequuntur saepe est provident repudiandae laborum enim ad cum illo eveniet incidunt iste repellat expedita. Fugit, exercitationem deleniti, nam hic corporis incidunt unde animi provident qui veritatis omnis iusto sit doloribus praesentium nobis consequuntur facere. Sequi, mollitia veniam. Expedita quos, molestiae laboriosam ab natus explicabo officia cumque, dolores excepturi aliquam unde voluptates? Incidunt eligendi veritatis doloremque numquam, sequi ut praesentium autem mollitia, qui, earum cumque debitis. Obcaecati magnam mollitia sint dignissimos iste iusto omnis saepe a suscipit corporis, odit facilis dolorum deleniti aspernatur, vero nihil neque veritatis accusamus. Eos, nesciunt reiciendis facere vitae cum ipsam repellat repellendus quos voluptatibus doloremque officia laudantium. Accusantium dicta aperiam expedita sapiente nulla delectus, itaque debitis mollitia eligendi dolore, impedit necessitatibus.    
+                        </p>
                       
                   </div>
               </div>              
@@ -56,14 +56,15 @@ include("header.php");
         <div class="container">
          <div class="row  pt-5">
              <div class="col-sm-12">
-                 <h1 class="text-center text-light ">Available Courses </h1>
+                 <h1 class="text-center text-light ">Courses Provided by us </h1>
              </div>
          </div>
           <div class="row ">
             <div class="col-sm-4 wrap pt-1 pb-1">
                 <img src="images/course.jpg" alt="" class="img-fluid">
                 <div class="cont text-center ">
-                    <h3 class="text-light">Beginner</h3>
+                    <h3 class="text-light">Bigginer</h3>
+                    <p class="text-none">if your are new to guitar world select me</p>
                    <a href="beginner.php" class="btn btn-info">click here</a>
                 </div>
                 
@@ -74,8 +75,9 @@ include("header.php");
                 
                 <img src="images/course.jpg" alt="" class="img-fluid">
                 <div class="cont text-center ">
-                    <h3 class="text-light">Master</h3>
-                   <a href="master.php" class="btn btn-info">click here</a>
+                    <h3 class="text-light">Advance</h3>
+                    <p class="text-none">if you know basic and want to improve select me</p>
+                   <a href="advance.php" class="btn btn-info">click here</a>
                    </div>
                 
                 
@@ -85,8 +87,9 @@ include("header.php");
                 
                 <img src="images/course.jpg" alt="" class="img-fluid">
                 <div class="cont text-center ">
-                    <h3 class="text-light">Pro</h3>
-                   <a href="pro.php" class="btn btn-info">click here</a>
+                    <h3 class="text-light">Master</h3>
+                    <p class="text-none">to master select me</p>
+                    <a href="master.php" class="btn btn-info">click here</a>
                 </div>
                 
                 
@@ -140,11 +143,15 @@ include("header.php");
                    
                </div>
                <div class="col-sm-6 d-none d-lg-block">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/f0Jy6XP30tg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                 <?php $q=mysqli_query($con,'select * from latest order by id DESC');
+				   
+				   $r=mysqli_fetch_array($q);
+				   
+				   ?>
+                 
+                  <iframe width="560" height="315" src="<?= $r['link']?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                </div>
-                <div class="col-sm-8 d-sm-block d-md-none">
-                  <iframe  src="https://www.youtube.com/embed/f0Jy6XP30tg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-               </div>
+              
            </div>
        </div>
                                       </div>  

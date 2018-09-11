@@ -21,7 +21,7 @@
     
    
         <nav class="navbar  navbar-expand-lg navbar-darker bg-darker">
-          <a class="navbar-brand" href="home.php"><img src="images/logo2.png" alt="logo" class="img-fluid"></a>
+          <a class="navbar-brand" href="home.php"><img src="images/logo.png" alt="logo" class="img-fluid"></a>
           <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -35,17 +35,17 @@
                 coures
                 </a>
                 <div class="dropdown-menu  bg-dropdown" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="beginner.php">biginner course</a>
+                  <a class="dropdown-item" href="beginner.php">Bigginer </a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="master.php">intermediate course</a>
+                  <a class="dropdown-item" href="advance.php">Advance </a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="pro.php">advance coures</a>
+                  <a class="dropdown-item" href="master.php">Master </a>
              </li>
              <li class="nav-item">
                 <a class="nav-link" href="latest.php">latest videos</a>
              </li>
                <li class="nav-item">
-                   <a class="nav-link" href="about.php">About Us </a>
+                   <a class="nav-link" href="about.php">Contact Us </a>
               </li>
                
             </ul>

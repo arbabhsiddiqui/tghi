@@ -31,7 +31,7 @@ function addlatest(){
 		
 		
 	}
-	r.open("post","includes/addnew.php?s="+t+"&title="+title+"&emb="+emb+'&descip='+descip);
+	r.open("post","includes/addmaster.php?s="+t+"&title="+title+"&emb="+emb+'&descip='+descip);
 	r.send();
 	
 }

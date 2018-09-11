@@ -13,30 +13,7 @@
       <link rel="stylesheet" href="css/gallery-grid.css">
        <link rel="stylesheet" href="css/style.css">
         <script src="js/addlatest.js"></script>
-        <script>
-			function del(i){
-				
-				
-				var x=document.getElementById("x"+i).value;
-				
-				
-				var t=Math.random
-					var r=new XMLHttpRequest();
-					r.onreadystatechange=function()
-					{
-						if(r.readyState==4)
-							{
-								alert(r.responseText);
-											}
-					}
-					r.open("post","includes/dellatest.php?s=" + t +"&x=" + x);
-					r.send();
-			}
-	  	
-	  
-	  
-	  
-	  </script>
+       
        
     <title>the guitar hero institution</title>
   </head>
@@ -78,8 +55,15 @@
 							<tr>
 								<td><?php echo $i?></td>
 								<td><?php echo $row['title']?></td>
+								
 								<form method="post">
-								<td><input type="button" onclick="del(<?php echo $i?>)" id="x<?php  echo $i ?>" value="x" class="btn btn-danger"></td>
+								<td>
+								<?php
+								$id=$row['id'];
+								echo "<a href='includes/dellatest.php?Id=$id' class='btn btn-info'>x</a>";
+							?>
+								
+								</td>
 								</form>
 							</tr>
 							<?php

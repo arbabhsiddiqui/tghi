@@ -141,6 +141,42 @@ html,body {
 
 /*banner end*/
 
+/*banner about*/
+
+
+.about{
+    background:url(../images/bg9.jpg) no-repeat center center fixed;
+    background-size: cover;
+	
+    width:100%;
+    text-align: center;
+    padding-bottom: 5%;
+}
+	.headdd{
+   
+    margin-top: 0%;
+    
+    
+}
+.text-work{
+    margin: 0 auto;
+    width:100%;
+	padding: 13%;
+}
+
+.text-work >h1{
+    font-size: 50px;
+    color:#fff;
+	
+    text-transform: uppercase;
+    font-weight: 400;
+	text-align: center;
+    
+}
+ 
+
+/*banner about end*/
+
 /*about us*/
 
 .aboutus{
@@ -181,16 +217,13 @@ html,body {
 
 }
 
-.section-a>h1{
-	
-}
 
 
 /*grid*/
 .warp{
     position: relative;
     padding: 0;
-    border 1px solid #000;
+    border: 1px solid #000;
     color:#000;
     
 }
@@ -255,6 +288,10 @@ html,body {
     color:aliceblue;
     
     
+}
+
+.text-none{
+    color:#2c3e50;
 }
 
 
@@ -352,6 +389,13 @@ background: linear-gradient(to left, #191654, #43C6AC); /* W3C, IE 10+/ Edge, Fi
 
 
 
+
 /*course ends*/
+
+
+/*contact  us*/
+.border{
+	border: 1px solid #000;
+}
 
 

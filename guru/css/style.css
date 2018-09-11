@@ -141,6 +141,41 @@ html,body {
 
 /*banner end*/
 
+
+/*banner about*/
+
+
+.about{
+    background:url(../images/bg9.jpg) no-repeat center center fixed;
+    background-size: cover;
+	background: #191654
+    width:100%;
+    text-align: center;
+    padding-bottom: 30%;
+}
+	.headdd{
+   
+    margin-top: 20%;
+    
+    
+}
+.text-work{
+    margin: 0 auto;
+    width:100%;
+}
+
+.text-work >h1{
+    font-size: 50px;
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: 400;
+	text-align: center;
+    
+}
+ 
+
+/*banner about end*/
+
 /*about us*/
 
 .aboutus{

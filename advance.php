@@ -6,10 +6,10 @@ include("guru/includes/connect.php");
 <div class="container-fluid">
 	<div class="container">
 	<?php 
-		$s=mysqli_query($con,"select * from big");
+		$s=mysqli_query($con,"select * from master");
 		$i=1;
 		if(mysqli_num_rows($s)==0){
-			echo "<h1>comming soon</h1>";
+			echo "<h1 class='text-center'>comming soon</h1>";
 		}
 		?>
 		

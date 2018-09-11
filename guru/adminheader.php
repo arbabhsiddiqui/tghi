@@ -20,7 +20,7 @@
                   <a class="dropdown-item" href="pro.php">advance coures</a>
              </li>
              <li class="nav-item">
-                <a class="nav-link" href="latest.php">add new videos in latest videos</a>
+                <a class="nav-link" href="latest.php">add latest videos</a>
              </li>
               <li class="nav-item">
                 <a class="nav-link" href="logout.php">logout</a>

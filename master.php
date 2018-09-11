@@ -1,80 +1,91 @@
 <?php
 include("header.php");
+include("guru/includes/connect.php");
 ?>
 <section class="course">
-    <div class="continer-fluid">
-        <div class="continer"> 
-           <div class="row">
-               <div class="col-sm-4 sidebar">
-                   <div class="row text-center">
-                    <div class="col-sm-12 b1">
-                        <h3>latest videos</h3>
-                        
-                    </div>
-                </div>
-                <div class="row  pt-5 text-center">
-                    <div class="col-sm-12">
-                        <ul>
-                            <li><a href="#">top 10 videos</a></li>
-                            <li class="pt-1"><a href="#">top 10 videos</a></li>
-                            <li class="pt-1"><a href="#">top 10 videos</a></li>
-                            <li class="pt-1"><a href="#">top 10 videos</a></li>
-                            <li class="pt-1"><a href="#">top 10 videos</a></li>
-                            <li class="pt-1"><a href="#">top 10 videos</a></li>
-                            <li class="pt-1"><a href="#">top 10 videos</a></li>
-                            <li class="pt-1"><a href="#">top 10 videos</a></li>
-                    
-                            </ul>
-                        
-                    </div>
-                </div>
-                </div>
-           
-               <div class="col-sm-8 main">
-                <div class="row text-center ">
-                    <div class="col-sm-6">
-                        <h3>big course</h3>
-                    </div>
-                </div>
-                <div class="row text-center ">
-                    <div class="col-sm-6">
-                         <iframe width="400" height="200" src="https://www.youtube.com/embed/TEPR9rJmK4I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                       
-                    </div>
-                    <div class="col-sm-6 ">
-                           <p class="pt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem porro explicabo consequuntur velit molestiae laborum itaque hic cupiditate debitis necessitatibus, excepturi fugiat ipsa odit id modi praesentium molestias adipisci nihil.</p>
-                    </div>
-                </div> 
-                 <div class="row text-center ">
-                    <div class="col-sm-6">
-                         <iframe width="400" height="200" src="https://www.youtube.com/embed/TEPR9rJmK4I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                       
-                    </div>
-                    <div class="col-sm-6 ">
-                           <iframe width="560" height="315" src="https://www.youtube.com/embed/uiLNzmdwEqc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    </div>
-                </div> 
-                 <div class="row text-center ">
-                    <div class="col-sm-6">
-                         <iframe width="400" height="200" src="https://www.youtube.com/embed/TEPR9rJmK4I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                       
-                    </div>
-                    <div class="col-sm-6 ">
-                           <p class="pt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem porro explicabo consequuntur velit molestiae laborum itaque hic cupiditate debitis necessitatibus, excepturi fugiat ipsa odit id modi praesentium molestias adipisci nihil.</p>
-                    </div>
-                </div>                                                         
-                                    
-                                    
-                                    
-            </div>
-           </div> 
-                            
-                    
-        </div>
-    </div>
-    
-    
-   
+<div class="container-fluid">
+	<div class="container">
+	
+	<?php 
+		$s=mysqli_query($con,"select * from pro");
+		$i=1;
+		if(mysqli_num_rows($s)==0){
+			echo "
+			<div class='row pt-5 pb-5'>
+		<div class='col-sm-12 pt-4 pb-2'>
+		<h1 class='text-center'>comming soon</h1>
+		</div>
+	</div>
+			";
+		}
+		?>
+		
+		<?php 
+		while($r=mysqli_fetch_array($s)):
+		?>
+		<div class="row">
+		<?php		if($i%2){	?>
+				
+				<div class="col-sm-4  pt-5">
+				<h3 class="text-center">
+				<?php echo $r['title'];	?></h3>
+				<p class="text-justify"><?php echo $r['descip'];?></p>
+				</div>
+				<div class="col-sm-8">
+				<iframe width="630" height="315" src="<?php echo $r['emb']?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+					
+				<?php	}
+			else{
+			?>
+				
+				<div class="col-sm-8">
+				<iframe width="630" height="315" src="<?php echo $r['emb']?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+				<div class="col-sm-4  pt-5">
+				<h3 class="text-center">
+				<?php echo $r['title'];	?></h3>
+				<p class="text-justify"><?php echo $r['descip'];?></p>
+				</div>
+				
+				<?php }?>
+				
+		</div>
+		
+		<?php
+		 $i++;
+		endwhile;?>
+			
+			
+	
+			
+		
+
+		<div class="row pt-1 pb-1 justify-content-end">
+			<nav aria-label="Page navigation pt-1 pb-1">
+  <ul class="pagination justify-content-end">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+		</div>
+	</div>
+</div>
+
+
 </section>
 
 

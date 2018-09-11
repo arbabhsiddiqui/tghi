@@ -12,13 +12,8 @@
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="css/gallery-grid.css">
        <link rel="stylesheet" href="css/style.css">
-        <script src="js/addnew.js"></script>
-        <script>
-	  	
-	  
-	  
-	  
-	  </script>
+        <script src="js/addmaster.js"></script>
+        
        
     <title>the guitar hero institution</title>
   </head>
@@ -39,7 +34,7 @@
 <div class="container">
 	<div class="row">
 	<div class="col-sm-12 text-center">
-	<h3>Add New Items In Bigginer Video Section</h3>
+	<h3>Add New Items In Advance Video Section</h3>
 		<div class="row">
 			<div class="col-sm-6 pt-5">
 				<table class="table">
@@ -52,7 +47,7 @@
 					<tbody>
 					<?php
 						include_once("includes/connect.php");
-						$s=mysqli_query($con,"select * from  big");
+						$s=mysqli_query($con,"select * from  master");
 						$i=0;
 						while($row=mysqli_fetch_array($s)){
 							$i++;
@@ -65,7 +60,7 @@
 								<td>
 									<?php
 									$id=$row['id'];
-									echo "<a href='includes/delnew.php?id=$id' class='btn btn-danger'>x</a>"
+									echo "<a href='includes/delmaster.php?id=$id' class='btn btn-danger'>x</a>"
 									?>
 								</td>
 								</form>
